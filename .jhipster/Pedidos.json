@@ -1,0 +1,47 @@
+{
+  "annotations": {},
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "idPedido",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "direccion",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fechaAlta",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "fechaEntrega",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "username",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isbn",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "Pedidos",
+  "relationships": [
+    {
+      "otherEntityName": "libros",
+      "otherEntityRelationshipName": "isbn",
+      "relationshipName": "isbn",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "usuarios",
+      "otherEntityRelationshipName": "username",
+      "relationshipName": "username",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    }
+  ]
+}

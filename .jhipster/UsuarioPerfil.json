@@ -1,0 +1,31 @@
+{
+  "annotations": {},
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "username",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idPerfil",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "UsuarioPerfil",
+  "relationships": [
+    {
+      "otherEntityName": "usuarios",
+      "otherEntityRelationshipName": "username",
+      "relationshipName": "username",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "perfil",
+      "otherEntityRelationshipName": "idPerfil",
+      "relationshipName": "idPerfil",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    }
+  ]
+}

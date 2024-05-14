@@ -1,0 +1,55 @@
+{
+  "annotations": {},
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "isbn",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "stock",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "autor",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "imagen",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "paginas",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "titulo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "numeroAlquilados",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "idTema",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "Libros",
+  "relationships": [
+    {
+      "otherEntityName": "pedidos",
+      "otherEntityRelationshipName": "isbn",
+      "relationshipName": "isbn",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "tematica",
+      "otherEntityRelationshipName": "idTema",
+      "relationshipName": "idTema",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
+    }
+  ]
+}

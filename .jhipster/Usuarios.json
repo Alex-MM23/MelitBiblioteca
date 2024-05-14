@@ -1,0 +1,55 @@
+{
+  "annotations": {},
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "username",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "password",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nombre",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "apellido",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "enabled",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "direccion",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "fechaAlta",
+      "fieldType": "Instant"
+    }
+  ],
+  "name": "Usuarios",
+  "relationships": [
+    {
+      "otherEntityName": "pedidos",
+      "otherEntityRelationshipName": "username",
+      "relationshipName": "username",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "usuarioPerfil",
+      "otherEntityRelationshipName": "username",
+      "relationshipName": "username",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-one"
+    }
+  ]
+}
