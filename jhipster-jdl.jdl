@@ -1,0 +1,87 @@
+
+entity Libros {
+    primaryKey Isbn
+	Isbn Integer 
+    stock Integer
+    autor String
+    imagen String
+    paginas Integer
+    titulo String 
+    numeroAlquilados Integer
+    idTema Integer
+    
+}
+
+entity Tematica {
+
+    primaryKey IdTema
+	IdTema Integer 
+	abreviatura String
+	descripcion String
+    
+}
+
+entity Pedidos {
+
+    primaryKey IdPedido
+	IdPedido Integer 
+	direccion String
+    fechaAlta Instant
+    fechaEntrega Instant 
+    username String 
+    isbn Integer
+}
+
+entity Perfil {
+	
+    primaryKey IdPerfil
+    IdPerfil Integer
+    administrador String
+	usuario String 
+
+}
+
+entity Usuarios {
+
+    primaryKey Username
+	Username String 
+	password String
+    email String 
+    nombre String
+    apellido String 
+    enabled Integer 
+    direccion Integer
+    fechaAlta Instant
+	
+}
+
+entity UsuarioPerfil {
+    
+	Username String
+    IdPerfil Integer 
+}
+
+
+
+relationship OneToOne {
+
+	UsuarioPerfil{username} to Usuarios {username}
+    UsuarioPerfil{idPerfil} to Perfil {idPerfil}
+    
+}
+
+
+relationship ManyToOne {
+	
+    Usuarios{username} to Pedidos{username}
+    
+}
+
+relationship OneToMany {
+	Libros{isbn} to Pedidos{isbn}
+}
+
+relationship ManyToMany {
+ Tematica{idTema} to Libros{idTema}
+}
+
