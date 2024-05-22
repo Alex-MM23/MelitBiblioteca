@@ -11,7 +11,13 @@
     <property name="datetimeType" value="datetime(6)" dbms="mysql"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240522081222_added_entity_Libros.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240522081420_added_entity_Tematica.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240522081553_added_entity_Pedidos.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240522081653_added_entity_Perfil.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240522081853_added_entity_Usuarios.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20240522081853_added_entity_constraints_Usuarios.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
     <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
 </databaseChangeLog>

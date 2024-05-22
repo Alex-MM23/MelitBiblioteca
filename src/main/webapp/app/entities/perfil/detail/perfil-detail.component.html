@@ -1,0 +1,38 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (perfil()) {
+      <div>
+        <h2 data-cy="perfilDetailsHeading"><span>Perfil</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span>ID</span></dt>
+          <dd>
+            <span>{{ perfil()!.id }}</span>
+          </dd>
+          <dt><span>Admin</span></dt>
+          <dd>
+            <span>{{ perfil()!.admin }}</span>
+          </dd>
+          <dt><span>Usuario</span></dt>
+          <dd>
+            <span>{{ perfil()!.usuario }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Volver</span>
+        </button>
+
+        <button type="button" [routerLink]="['/perfil', perfil()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

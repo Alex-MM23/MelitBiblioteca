@@ -1,11 +1,8 @@
 {
-  "annotations": {},
-  "applications": "*",
+  "annotations": {
+    "changelogDate": "20240522081420"
+  },
   "fields": [
-    {
-      "fieldName": "idTema",
-      "fieldType": "Integer"
-    },
     {
       "fieldName": "abreviatura",
       "fieldType": "String"
@@ -16,13 +13,9 @@
     }
   ],
   "name": "Tematica",
-  "relationships": [
-    {
-      "otherEntityName": "libros",
-      "otherEntityRelationshipName": "idTema",
-      "relationshipName": "idTema",
-      "relationshipSide": "left",
-      "relationshipType": "many-to-many"
-    }
-  ]
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "no"
 }

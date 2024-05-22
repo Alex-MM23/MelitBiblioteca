@@ -1,0 +1,88 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-libros-heading" data-cy="LibrosCreateUpdateHeading">Crear o editar Libros</h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_isbn">Isbn</label>
+          <input type="number" class="form-control" name="isbn" id="field_isbn" data-cy="isbn" formControlName="isbn" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_stock">Stock</label>
+          <input type="number" class="form-control" name="stock" id="field_stock" data-cy="stock" formControlName="stock" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_autor">Autor</label>
+          <input type="text" class="form-control" name="autor" id="field_autor" data-cy="autor" formControlName="autor" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_imagen">Imagen</label>
+          <input type="text" class="form-control" name="imagen" id="field_imagen" data-cy="imagen" formControlName="imagen" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_paginas">Paginas</label>
+          <input type="number" class="form-control" name="paginas" id="field_paginas" data-cy="paginas" formControlName="paginas" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_titulo">Titulo</label>
+          <input type="text" class="form-control" name="titulo" id="field_titulo" data-cy="titulo" formControlName="titulo" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_numeroAlquilados">Numero Alquilados</label>
+          <input
+            type="number"
+            class="form-control"
+            name="numeroAlquilados"
+            id="field_numeroAlquilados"
+            data-cy="numeroAlquilados"
+            formControlName="numeroAlquilados"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_idTematica">Id Tematica</label>
+          <input
+            type="number"
+            class="form-control"
+            name="idTematica"
+            id="field_idTematica"
+            data-cy="idTematica"
+            formControlName="idTematica"
+          />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span>Cancelar</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span>Guardar</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

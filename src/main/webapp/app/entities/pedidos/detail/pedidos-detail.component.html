@@ -1,0 +1,46 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (pedidos()) {
+      <div>
+        <h2 data-cy="pedidosDetailsHeading"><span>Pedidos</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span>ID</span></dt>
+          <dd>
+            <span>{{ pedidos()!.id }}</span>
+          </dd>
+          <dt><span>Direccion</span></dt>
+          <dd>
+            <span>{{ pedidos()!.direccion }}</span>
+          </dd>
+          <dt><span>Fecha Alta</span></dt>
+          <dd>
+            <span>{{ pedidos()!.fechaAlta | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span>Fecha Entrega</span></dt>
+          <dd>
+            <span>{{ pedidos()!.fechaEntrega | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span>Username</span></dt>
+          <dd>
+            <span>{{ pedidos()!.username }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Volver</span>
+        </button>
+
+        <button type="button" [routerLink]="['/pedidos', pedidos()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

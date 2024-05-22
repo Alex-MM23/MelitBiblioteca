@@ -1,0 +1,58 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (usuarios()) {
+      <div>
+        <h2 data-cy="usuariosDetailsHeading"><span>Usuarios</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span>ID</span></dt>
+          <dd>
+            <span>{{ usuarios()!.id }}</span>
+          </dd>
+          <dt><span>Username</span></dt>
+          <dd>
+            <span>{{ usuarios()!.username }}</span>
+          </dd>
+          <dt><span>Password</span></dt>
+          <dd>
+            <span>{{ usuarios()!.password }}</span>
+          </dd>
+          <dt><span>Email</span></dt>
+          <dd>
+            <span>{{ usuarios()!.email }}</span>
+          </dd>
+          <dt><span>Nombre</span></dt>
+          <dd>
+            <span>{{ usuarios()!.nombre }}</span>
+          </dd>
+          <dt><span>Apellido</span></dt>
+          <dd>
+            <span>{{ usuarios()!.apellido }}</span>
+          </dd>
+          <dt><span>Direccion</span></dt>
+          <dd>
+            <span>{{ usuarios()!.direccion }}</span>
+          </dd>
+          <dt><span>Fecha Alta</span></dt>
+          <dd>
+            <span>{{ usuarios()!.fechaAlta | formatMediumDatetime }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Volver</span>
+        </button>
+
+        <button type="button" [routerLink]="['/usuarios', usuarios()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

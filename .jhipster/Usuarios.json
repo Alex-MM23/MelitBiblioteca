@@ -1,6 +1,7 @@
 {
-  "annotations": {},
-  "applications": "*",
+  "annotations": {
+    "changelogDate": "20240522081853"
+  },
   "fields": [
     {
       "fieldName": "username",
@@ -23,12 +24,8 @@
       "fieldType": "String"
     },
     {
-      "fieldName": "enabled",
-      "fieldType": "Integer"
-    },
-    {
       "fieldName": "direccion",
-      "fieldType": "Integer"
+      "fieldType": "String"
     },
     {
       "fieldName": "fechaAlta",
@@ -36,20 +33,9 @@
     }
   ],
   "name": "Usuarios",
-  "relationships": [
-    {
-      "otherEntityName": "pedidos",
-      "otherEntityRelationshipName": "username",
-      "relationshipName": "username",
-      "relationshipSide": "left",
-      "relationshipType": "many-to-one"
-    },
-    {
-      "otherEntityName": "usuarioPerfil",
-      "otherEntityRelationshipName": "username",
-      "relationshipName": "username",
-      "relationshipSide": "right",
-      "relationshipType": "one-to-one"
-    }
-  ]
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "no"
 }

@@ -1,6 +1,7 @@
 {
-  "annotations": {},
-  "applications": "*",
+  "annotations": {
+    "changelogDate": "20240522081222"
+  },
   "fields": [
     {
       "fieldName": "isbn",
@@ -31,25 +32,14 @@
       "fieldType": "Integer"
     },
     {
-      "fieldName": "idTema",
+      "fieldName": "idTematica",
       "fieldType": "Integer"
     }
   ],
   "name": "Libros",
-  "relationships": [
-    {
-      "otherEntityName": "pedidos",
-      "otherEntityRelationshipName": "isbn",
-      "relationshipName": "isbn",
-      "relationshipSide": "left",
-      "relationshipType": "one-to-many"
-    },
-    {
-      "otherEntityName": "tematica",
-      "otherEntityRelationshipName": "idTema",
-      "relationshipName": "idTema",
-      "relationshipSide": "right",
-      "relationshipType": "many-to-many"
-    }
-  ]
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "no"
 }

@@ -1,13 +1,10 @@
 {
-  "annotations": {},
-  "applications": "*",
+  "annotations": {
+    "changelogDate": "20240522081653"
+  },
   "fields": [
     {
-      "fieldName": "idPerfil",
-      "fieldType": "Integer"
-    },
-    {
-      "fieldName": "administrador",
+      "fieldName": "admin",
       "fieldType": "String"
     },
     {
@@ -16,13 +13,9 @@
     }
   ],
   "name": "Perfil",
-  "relationships": [
-    {
-      "otherEntityName": "usuarioPerfil",
-      "otherEntityRelationshipName": "idPerfil",
-      "relationshipName": "idPerfil",
-      "relationshipSide": "right",
-      "relationshipType": "one-to-one"
-    }
-  ]
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "no"
 }

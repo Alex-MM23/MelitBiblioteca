@@ -1,0 +1,62 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (libros()) {
+      <div>
+        <h2 data-cy="librosDetailsHeading"><span>Libros</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span>ID</span></dt>
+          <dd>
+            <span>{{ libros()!.id }}</span>
+          </dd>
+          <dt><span>Isbn</span></dt>
+          <dd>
+            <span>{{ libros()!.isbn }}</span>
+          </dd>
+          <dt><span>Stock</span></dt>
+          <dd>
+            <span>{{ libros()!.stock }}</span>
+          </dd>
+          <dt><span>Autor</span></dt>
+          <dd>
+            <span>{{ libros()!.autor }}</span>
+          </dd>
+          <dt><span>Imagen</span></dt>
+          <dd>
+            <span>{{ libros()!.imagen }}</span>
+          </dd>
+          <dt><span>Paginas</span></dt>
+          <dd>
+            <span>{{ libros()!.paginas }}</span>
+          </dd>
+          <dt><span>Titulo</span></dt>
+          <dd>
+            <span>{{ libros()!.titulo }}</span>
+          </dd>
+          <dt><span>Numero Alquilados</span></dt>
+          <dd>
+            <span>{{ libros()!.numeroAlquilados }}</span>
+          </dd>
+          <dt><span>Id Tematica</span></dt>
+          <dd>
+            <span>{{ libros()!.idTematica }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Volver</span>
+        </button>
+
+        <button type="button" [routerLink]="['/libros', libros()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>
