@@ -1,6 +1,7 @@
 
 entity Libros {
-	isbn Integer
+    primaryKey Isbn
+	Isbn Integer 
     stock Integer
     autor String
     imagen String
@@ -13,6 +14,7 @@ entity Libros {
 
 entity Tematica {
 
+    primaryKey IdTema
 	IdTema Integer 
 	abreviatura String
 	descripcion String
@@ -21,6 +23,7 @@ entity Tematica {
 
 entity Pedidos {
 
+    primaryKey IdPedido
 	IdPedido Integer 
 	direccion String
     fechaAlta Instant
@@ -30,6 +33,8 @@ entity Pedidos {
 }
 
 entity Perfil {
+	
+    primaryKey IdPerfil
     IdPerfil Integer
     administrador String
 	usuario String 
@@ -38,6 +43,7 @@ entity Perfil {
 
 entity Usuarios {
 
+    primaryKey Username
 	Username String 
 	password String
     email String 
@@ -78,3 +84,4 @@ relationship OneToMany {
 relationship ManyToMany {
  Tematica{idTema} to Libros{idTema}
 }
+
