@@ -50,7 +50,7 @@ li {
   background-color: rgba(133, 24, 24, 0.93);
   padding: 20px;
   text-align: center;
-  color: antiquewhite;
+  color: ivory;
 }
 .imagencarta {
   width: 75%;
@@ -58,4 +58,14 @@ li {
 }
 .titulo-carta {
   margin-top: 0;
+}
+
+.bg-custom {
+  background-color: #6d0c2e;
+}
+
+#titulo {
+  text-align: center;
+  color: black;
+  font-weight: 500;
 }

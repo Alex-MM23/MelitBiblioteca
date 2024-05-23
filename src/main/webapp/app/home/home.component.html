@@ -3,6 +3,10 @@
     <span class="hipster img-fluid rounded"></span>
   </div>
 
+  <div *ngIf="modalSwitch">
+    <jhi-inicio></jhi-inicio>
+  </div>
+
   <div class="col-md-9">
     <h5 class="display-4">
       ¡Bienvenido a tu biblioteca online! Aquí encontrarás una amplia colección de libros electrónicos y audiolibros para todos los gustos y
@@ -14,9 +18,7 @@
     <div>
       @if (account() !== null) {
         <div class="alert alert-success">
-          @if (account()) {
-            <span id="home-logged-message">Está conectado como &quot;{{ account()!.login }}&quot;.</span>
-          }
+          <span id="home-logged-message">Está conectado como &quot;{{ account()!.login }}&quot;.</span>
         </div>
       } @else {
         <div class="alert alert-warning">
@@ -33,7 +35,6 @@
           <a class="alert-link" routerLink="/account/register">Crea una cuenta</a>
         </div>
       }
-      <h4></h4>
     </div>
 
     <a class="alert-link" (click)="generos()">Generos</a>
