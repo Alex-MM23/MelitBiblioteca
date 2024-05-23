@@ -4,6 +4,9 @@
 /* ==========================================================================
 Navbar
 ========================================================================== */
+$theme-colors: (
+  'primary': #6d0c2e,
+);
 
 .navbar-version {
   font-size: 0.65em;
@@ -17,7 +20,6 @@ Navbar
 
 .navbar {
   padding: 0.2rem 1rem;
-
   a.nav-link {
     font-weight: 400;
   }
@@ -33,4 +35,8 @@ Logo styles
   vertical-align: middle;
   background: url('/content/images/logo-jhipster.png') no-repeat center center;
   background-size: contain;
+}
+
+.bg-custom {
+  background-color: #6d0c2e;
 }

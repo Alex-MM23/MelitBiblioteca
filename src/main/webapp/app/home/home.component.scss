@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 /* ==========================================================================
 Main page styles
 ========================================================================== */
@@ -20,4 +21,16 @@ Main page styles
     background: url('../../content/images/jhipster_family_member_1.svg') no-repeat center top;
     background-size: contain;
   }
+}
+h4 {
+  align-items: center;
+  justify-content: center;
+}
+footer {
+  position: fixed;
+  bottom: 0%;
+}
+h5 {
+  font-size: 35px;
+  font-family: 'Montserrat', sans-serif;
 }
