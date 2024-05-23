@@ -30,6 +30,16 @@
             </span>
           </a>
         </li>
+        <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+          <a class="nav-link" routerLink="/generos" (click)="collapseNavbar()">
+            <span>
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAOFJREFUSEvtlc0JAjEQhb9Xh+LZAmzAAsRCBFsQb4IHD4JoGzZgAdYgCGoZMmrYleyy2ej+gAdz22zmfS8zyUS0PNSyPhmAmY2BBdCvAD4DO2Ap6Z7G5wFXoFNB3A9ZS5qGAPb6IcmBzcx9vxcn80UGzGwAHIGLpF7jAN9QatCZ9d2kjqvs4A9wmfRzGyh05pB8UoPDU3eeiM0kDcuOcL6GUcC39+EPiGbsd1IUtRpZEG0VrQHqCJvZCNjnL2RjL5rXrm+SuqXtus5OgI2kSRuAE7AFVsEns6bzwvDGahAy9wBnMKcZrBcwEwAAAABJRU5ErkJggg=="
+              />
+              <span>Géneros</span>
+            </span>
+          </a>
+        </li>
         <!-- jhipster-needle-add-element-to-menu - JHipster will add new menu items here -->
         @if (account() !== null) {
           <li
