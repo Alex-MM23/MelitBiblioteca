@@ -1,0 +1,21 @@
+{
+  "annotations": {
+    "changelogDate": "20240523155031"
+  },
+  "fields": [
+    {
+      "fieldName": "abreviatura",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "descripcion",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Tematica",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "no"
+}

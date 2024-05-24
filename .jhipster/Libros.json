@@ -1,0 +1,41 @@
+{
+  "annotations": {
+    "changelogDate": "20240523154939"
+  },
+  "fields": [
+    {
+      "fieldName": "isbn",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "stock",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "autor",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "imagen",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "paginas",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "titulo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "numeroAlquilados",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "Libros",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "no"
+}

@@ -1,0 +1,29 @@
+{
+  "annotations": {
+    "changelogDate": "20240523155134"
+  },
+  "fields": [
+    {
+      "fieldName": "direccion",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fechaAlta",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "fechaEntrega",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "username",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Pedidos",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "no"
+}

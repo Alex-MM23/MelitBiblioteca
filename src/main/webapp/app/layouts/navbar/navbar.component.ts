@@ -9,13 +9,14 @@ import { LoginService } from 'app/login/login.service';
 import { ProfileService } from 'app/layouts/profiles/profile.service';
 import { EntityNavbarItems } from 'app/entities/entity-navbar-items';
 import NavbarItem from './navbar-item.model';
+import { LibrosComponent } from 'app/entities/libros/list/libros.component';
 
 @Component({
   standalone: true,
   selector: 'jhi-navbar',
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
-  imports: [RouterModule, SharedModule, HasAnyAuthorityDirective],
+  imports: [RouterModule, SharedModule, HasAnyAuthorityDirective, LibrosComponent],
 })
 export default class NavbarComponent implements OnInit {
   inProduction?: boolean;

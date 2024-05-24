@@ -50,7 +50,12 @@ const routes: Routes = [
   {
     path: 'generos',
     component: GenerosComponent,
-    title: 'generos.title',
+    title: 'Géneros',
+  },
+  {
+    path: 'libros',
+    component: InicioComponent,
+    title: 'Libros',
   },
   ...errorRoute,
 ];

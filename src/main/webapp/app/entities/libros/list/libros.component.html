@@ -1,0 +1,134 @@
+<div>
+  <h2 id="page-heading" data-cy="LibrosHeading">
+    <span>Libros</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
+        <span>Refrescar lista</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-libros"
+        [routerLink]="['/libros/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span>Crear nuevo Libros</span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  @if (libros?.length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span>Ningún Libros encontrado</span>
+    </div>
+  }
+  <jhi-buscador-admin (TextoFiltro)="OnFiltroLibros($event)"></jhi-buscador-admin>
+  @if (libros && libros.length > 0) {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [sortState]="sortState" (sortChange)="navigateToWithComponentValues($event)">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span>ID</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="isbn">
+              <div class="d-flex">
+                <span>Isbn</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="stock">
+              <div class="d-flex">
+                <span>Stock</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="autor">
+              <div class="d-flex">
+                <span>Autor</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="imagen">
+              <div class="d-flex">
+                <span>Género</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="paginas">
+              <div class="d-flex">
+                <span>Paginas</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="titulo">
+              <div class="d-flex">
+                <span>Titulo</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="numeroAlquilados">
+              <div class="d-flex">
+                <span>Numero Alquilados</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (libros of TablaFiltrar ?? libros; track trackId) {
+            <tr data-cy="entityTable">
+              <td>
+                <a [routerLink]="['/libros', libros.id, 'view']">{{ libros.id }}</a>
+              </td>
+              <td>{{ libros.isbn }}</td>
+              <td>{{ libros.stock }}</td>
+              <td>{{ libros.autor }}</td>
+              <td>{{ libros.imagen }}</td>
+              <td>{{ libros.paginas }}</td>
+              <td>{{ libros.titulo }}</td>
+              <td>{{ libros.numeroAlquilados }}</td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a [routerLink]="['/libros', libros.id, 'view']" class="btn btn-info btn-sm" data-cy="entityDetailsButton">
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline">Vista</span>
+                  </a>
+
+                  <a [routerLink]="['/libros', libros.id, 'edit']" class="btn btn-primary btn-sm" data-cy="entityEditButton">
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline">Editar</span>
+                  </a>
+
+                  <button type="submit" (click)="delete(libros)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline">Eliminar</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>
